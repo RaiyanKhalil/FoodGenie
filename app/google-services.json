@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "217955132103",
+    "firebase_url": "https://fir-authdemo-62b3d.firebaseio.com",
+    "project_id": "fir-authdemo-62b3d",
+    "storage_bucket": "fir-authdemo-62b3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217955132103:android:168c1a37ca34e4dc5294e2",
+        "android_client_info": {
+          "package_name": "com.example.foodgenie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217955132103-ibl8617cqbtoolrag8c2ce3sgstdtudo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5SKrKVgJg35xzsnY9uOBnV6c8tJWTtuM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217955132103-ibl8617cqbtoolrag8c2ce3sgstdtudo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217955132103:android:d9599850e72e21c35294e2",
+        "android_client_info": {
+          "package_name": "com.sanzar.firebaseauthdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217955132103-ibl8617cqbtoolrag8c2ce3sgstdtudo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5SKrKVgJg35xzsnY9uOBnV6c8tJWTtuM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217955132103-ibl8617cqbtoolrag8c2ce3sgstdtudo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
