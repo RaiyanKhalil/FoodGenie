@@ -4,20 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00FFFFFF"
+    android:background="#1F2029"
     tools:context=".MainActivity">
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/userEmail"
         android:layout_width="242dp"
         android:layout_height="57dp"
-        android:layout_marginTop="314dp"
-        android:layout_marginBottom="27dp"
+        android:layout_marginTop="288dp"
         android:hint="Email"
+        android:inputType="textEmailAddress"
         android:singleLine="true"
-        android:textColorHint="#757575"
-        app:layout_constraintBottom_toTopOf="@+id/userPassword"
+        android:textColor="@color/white"
+        android:textColorHighlight="#3D5AFE"
+        android:textColorHint="@color/white"
+        android:textColorLink="#3D5AFE"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,28 +28,47 @@
         android:id="@+id/loginBtn"
         android:layout_width="133dp"
         android:layout_height="57dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginEnd="55dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="181dp"
         android:text="Login"
         app:backgroundTint="#3F51B5"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/userPassword"
-        app:layout_constraintStart_toStartOf="@+id/userEmail"
-        app:layout_constraintTop_toBottomOf="@+id/userPassword" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userPassword"
+        app:layout_constraintVertical_bias="0.018" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/userPassword"
         android:layout_width="244dp"
         android:layout_height="57dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginTop="20dp"
         android:hint="Password"
+        android:inputType="textPassword"
         android:singleLine="true"
-        android:textColorHint="#757575"
-        app:layout_constraintBottom_toTopOf="@+id/loginBtn"
+        android:textColor="@color/white"
+        android:textColorHighlight="#3D5AFE"
+        android:textColorHint="@color/white"
+        android:textColorLink="#3D5AFE"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/userEmail"
+        tools:textColorHint="@color/white" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="195dp"
+        android:layout_marginBottom="74dp"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/userEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
