@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="#282932"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp"
+    app:contentPadding="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/food_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/food_name"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="TextView"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/food_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/food_labels"
+            android:layout_width="235dp"
+            android:layout_height="86dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="TextView"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/food_image"
+            app:layout_constraintTop_toBottomOf="@+id/food_name" />
+
+        <TextView
+            android:id="@+id/num_of_servings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="8 Servings"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/food_image" />
+
+        <TextView
+            android:id="@+id/total_calories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="233 kcal"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/num_of_servings" />
+
+        <TextView
+            android:id="@+id/protein_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:text="Protein: 97g"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/num_of_servings"
+            app:layout_constraintTop_toBottomOf="@+id/food_image" />
+
+        <TextView
+            android:id="@+id/fat_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:text="Fat: 101g"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/num_of_servings"
+            app:layout_constraintTop_toBottomOf="@+id/protein_num" />
+
+        <TextView
+            android:id="@+id/carb_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:text="Carb: 147g"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/num_of_servings"
+            app:layout_constraintTop_toBottomOf="@+id/fat_num" />
+
+        <TextView
+            android:id="@+id/cholestrol_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:text="Cholesterol: 40mg"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/protein_num"
+            app:layout_constraintTop_toBottomOf="@+id/food_image" />
+
+        <TextView
+            android:id="@+id/sodium_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:text="Sodium: 246mg"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/protein_num"
+            app:layout_constraintTop_toBottomOf="@+id/cholestrol_num" />
+
+        <TextView
+            android:id="@+id/calcium_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:text="Calcium: 50mg"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/protein_num"
+            app:layout_constraintTop_toBottomOf="@+id/sodium_num" />
+
+        <TextView
+            android:id="@+id/magnesium_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:text="Magnesium: 39mg"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/protein_num"
+            app:layout_constraintTop_toBottomOf="@+id/calcium_num" />
+
+        <TextView
+            android:id="@+id/potassium_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:text="Potassium: 281mg"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/protein_num"
+            app:layout_constraintTop_toBottomOf="@+id/magnesium_num" />
+
+        <TextView
+            android:id="@+id/iron_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:text="Iron: 1mg"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/protein_num"
+            app:layout_constraintTop_toBottomOf="@+id/potassium_num" />
+
+        <Button
+            android:id="@+id/see_recipe_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="16dp"
+            android:text="See Recipe"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iron_num"
+            app:layout_constraintTop_toBottomOf="@+id/carb_num" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
