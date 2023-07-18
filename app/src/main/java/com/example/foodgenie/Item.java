@@ -9,12 +9,12 @@ public class Item {
             foodProtein, foodFat, foodCarb, foodCholesterol, foodSodium,
             foodCalcium, foodMagnesium, foodPotassium, foodIron, foodSeeRecipe;
 
-    public Item(String foodImage, String foodName, String foodProtein) {
-        this.foodImage = foodImage;
-        this.foodName = foodName;
-        this.foodProtein = foodProtein;
-
-    }
+//    public Item(String foodImage, String foodName, String foodProtein) {
+//        this.foodImage = foodImage;
+//        this.foodName = foodName;
+//        this.foodProtein = foodProtein;
+//
+//    }
 
     public Item(String foodImage, String foodName, String foodLabels, String foodServings, String foodTotalCalories, String foodProtein, String foodFat, String foodCarb, String foodCholesterol, String foodSodium, String foodCalcium, String foodMagnesium, String foodPotassium, String foodIron, String foodSeeRecipe) {
         this.foodImage = foodImage;

@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class HomeActivity extends AppCompatActivity {
 
-    Button recipeBtn;
+    Button recipeBtn, analyzeBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +20,16 @@ public class HomeActivity extends AppCompatActivity {
 //            actionBar.setElevation(0); // Remove shadow if needed
 //            actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#1F2029"))); // Replace #FF0000 with your desired color code
 //        }
+
+        analyzeBtn = findViewById(R.id.analyzeBtn);
+
+        analyzeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, NutrientActivity.class);
+                startActivity(intent);
+            }
+        });
 
         recipeBtn = findViewById(R.id.recipeBtn);
 
