@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1F2029"
     tools:context=".NutrientActivity">
 
     <SearchView
@@ -11,11 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="2dp"
-        android:background="@color/white"
+        android:background="#606380"
         android:elevation="3dp"
+        android:iconifiedByDefault="false"
         android:inputType="textMultiLine"
         android:queryHint="250 gram chicken"
         android:searchIcon="?android:attr/actionModeWebSearchDrawable"
+        android:theme="@style/WhiteSearchViewThemes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,6 +38,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#1F2029"
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
@@ -45,7 +49,8 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="#282932">
 
                     <com.github.mikephil.charting.charts.PieChart
                         android:id="@+id/chart"
@@ -72,7 +77,8 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="#282932">
 
                     <TextView
                         android:id="@+id/nutritionFact"
@@ -80,6 +86,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="Nutrition Facts"
+                        android:textColor="@color/white"
                         android:textSize="34sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -92,6 +99,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:text="Amounts per Servings"
+                        android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/divider11" />
@@ -103,6 +111,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:text="Calories 702"
+                        android:textColor="@color/white"
                         android:textSize="34sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/per_serveing" />
@@ -114,6 +123,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:text="Total Fat"
+                        android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/divider12" />
@@ -125,6 +135,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:text="Cholesterol"
+                        android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/divider13" />
@@ -136,6 +147,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:text="Sodium"
+                        android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/divider14" />
@@ -147,6 +159,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:text="Total Carbohydrate"
+                        android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/divider15" />
@@ -158,6 +171,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:text="Protein"
+                        android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/divider16" />
@@ -169,6 +183,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:text="Calcium"
+                        android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/divider17" />
@@ -180,6 +195,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:text="Iron"
+                        android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/divider18" />
@@ -192,6 +208,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="16dp"
                         android:text="Potassium"
+                        android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -205,6 +222,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
                         android:background="?android:attr/listDivider"
+                        android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/nutritionFact" />

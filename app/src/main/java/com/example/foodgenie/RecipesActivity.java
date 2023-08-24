@@ -1,10 +1,13 @@
 package com.example.foodgenie;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -38,6 +41,12 @@ public class RecipesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipes);
+
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setElevation(0); // Remove shadow if needed
+            actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#1F2029"))); // Replace #FF0000 with your desired color code
+        }
 
         recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -115,21 +124,6 @@ public class RecipesActivity extends AppCompatActivity {
         });
 
         requestQueue.add(jsonObjectRequest);
-
-//        button = findViewById(R.id.see_recipe_btn);
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                int position = recyclerView.getChildAdapterPosition((View) v.getParent());
-//                Item clickedItem = list.get(position);
-//                String seeRecipe = clickedItem.getFoodSeeRecipe();
-//
-//                Uri uri = Uri.parse(seeRecipe.toString()); // missing 'http://' will cause crashed
-//                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-//                startActivity(intent);
-//            }
-//        });
 
     }
 

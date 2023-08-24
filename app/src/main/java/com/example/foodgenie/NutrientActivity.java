@@ -1,8 +1,11 @@
 package com.example.foodgenie;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ScrollView;
@@ -16,6 +19,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
@@ -40,6 +44,12 @@ public class NutrientActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nutrient);
 
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setElevation(0); // Remove shadow if needed
+            actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#1F2029"))); // Replace #FF0000 with your desired color code
+        }
+
         requestQueue = VolleySingleton.getInstance(this).getRequestQueue();
 
 
@@ -57,8 +67,11 @@ public class NutrientActivity extends AppCompatActivity {
         scrollView = findViewById(R.id.nutrition_val);
         scrollView.setVisibility(View.GONE);
 
+
         searchView = findViewById(R.id.search_nutrient_view);
-        searchView.setSubmitButtonEnabled(true);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            searchView.setSubmitButtonEnabled(true);
+        }
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -116,6 +129,9 @@ public class NutrientActivity extends AppCompatActivity {
 
 
                     PieChart pieChart = findViewById(R.id.chart);
+                    Legend legend = pieChart.getLegend();
+                    legend.setTextSize(16);
+                    legend.setTextColor(Color.WHITE);
 
                     ArrayList<PieEntry> entries = new ArrayList<>();
                     entries.add(new PieEntry(Float.parseFloat(proteinCal), "Protein"));

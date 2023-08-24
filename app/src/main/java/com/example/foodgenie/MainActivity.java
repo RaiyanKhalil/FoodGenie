@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     EditText userEmail;
     EditText userPassword;
     Button looginBtn;
+    TextView signUpBtn;
     private DatabaseReference databaseRef;
 
     @Override
@@ -105,4 +107,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void signUpUser(View view) {
+        signUpBtn = findViewById(R.id.sign_up_btn);
+
+        signUpBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 }

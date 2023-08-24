@@ -3,12 +3,15 @@ package com.example.foodgenie;
 
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,6 +26,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     Context context;
     List<Item> itemList;
     View view;
+
 
     public RecyclerAdapter(Context context, List<Item> itemList){
         this.context = context;
@@ -54,6 +58,22 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         holder.setFoodPotassium(item.getFoodPotassium());
         holder.setFoodIron(item.getFoodIron());
         holder.setFoodSeeRecipe(item.getFoodSeeRecipe());
+
+
+
+        holder.seeRecipeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String seeRecipe = item.getFoodSeeRecipe();
+                Uri uri = Uri.parse(seeRecipe);
+
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                context.startActivity(intent);
+
+//                Toast.makeText(context, uri.toString(), Toast.LENGTH_LONG).show();
+
+            }
+        });
     }
 
     @Override
@@ -69,10 +89,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                  foodCalcium, foodMagnesium, foodPotassium, foodIron;
         String foodSeeRecipe;
         View view;
+        Button seeRecipeButton;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             view = itemView;
+
+            seeRecipeButton = itemView.findViewById(R.id.see_recipe_btn); // Initialize the Button view
+
         }
 
         public void setFoodImage(String url) {
